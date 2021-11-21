@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+# Auto detect text files and perform LF normalization
+* text=auto
+=======
+* text=auto
+*.css linguist-vendored
+*.scss linguist-vendored
+*.js linguist-vendored
+CHANGELOG.md export-ignore
+>>>>>>> 2d17618061e5898fbe19a2bf89505ff5a56503dc
