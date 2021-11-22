@@ -37,3 +37,12 @@ Route::post('/pegawai/store','PegawaiController@store');
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+
+//absen
+Route::get('/absen','AbsenController@view');
+Route::get('/absen/nambah','AbsenController@nambah');
+Route::post('/absen/save','AbsenController@save');
+Route::get('/absen/ngedit/{id}','AbsenController@ngedit');
+Route::post('/absen/update','AbsenController@update');
+Route::get('/absen/hapus/{id}','AbsenController@hapus');
+
