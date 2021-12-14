@@ -14,39 +14,50 @@
 	<title>ABSEN PEGAWAI</title>
 </head>
 
-<body class="container">
+<body>
+    <div class="container">
     @extends('layout.ceria')
-    @section('title', 'ABSEN PEGAWAI')
     @section('isikonten')
 
-    <h3>Data Pegawai</h3>
-	<a href="/absen/nambah" class="btn btn-primary" > + Tambah Pegawai Baru</a>
-
+    <h3>Absen Pegawai</h3>
+	<a href="/absen/tambah" class="btn btn-primary" > + Tambah Pegawai Baru</a>
 	<br/>
 	<br/>
-
+    <p align="center">Cari Data Absen Pegawai Berdasarkan Nama:</p>
+    <form action="/absen/cari" method="GET">
+        <input class="form-control" type="text" name="cari" placeholder="Cari Data Absen Pegawai .." value="{{ old('cari') }}">
+        <input class="form-control btn-success" type="submit" value="CARI">
+    </form>
+    <br/>
+	<br/>
 	<table class="table table-success table-striped">
 		<tr>
-			<th>ID</th>
-			<th>IDPegawai</th>
+            <th>No</th>
+            <th>Nama</th>
 			<th>Tanggal</th>
 			<th>Status</th>
 			<th>Opsi</th>
 		</tr>
 		@foreach($absen as $a)
 		<tr>
-			<td>{{ $a->a_ID }}</td>
-			<td>{{ $a->a_IDPegawai }}</td>
+            <td>{{ $loop->iteration }}</td>
+			<td>{{ $a->pegawai_nama }}</td>
 			<td>{{ $a->a_tanggal }}</td>
 			<td>{{ $a->a_status }}</td>
 			<td>
-				<a href="/absen/ngedit/{{ $a->a_ID }}" class="btn btn-warning">Edit</a>
-				|
+                <a href="/absen/detail/{{ $a->a_ID }}" class="btn btn-info">View Detail</a>
+                |
+				<a href="/absen/edit/{{ $a->a_ID }}" class="btn btn-warning">Edit</a>
+                |
 				<a href="/absen/hapus/{{ $a->a_ID }}" class="btn btn-danger">Hapus</a>
 			</td>
 		</tr>
 		@endforeach
 	</table>
-    @endsection
+    {{ $absen->links()  }}
+</div>
+@endsection
 </body>
 </html>
+
+

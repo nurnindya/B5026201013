@@ -16,7 +16,7 @@
             z-index: 1;
             top: 0;
             left: 0;
-            background-color: rgb(230, 23, 143);
+            background-color: #c70ebe;
             overflow-x: hidden;
             transition: 0.5s;
             padding-top: 60px;
@@ -42,13 +42,13 @@
         .openbtn {
             font-size: 20px;
             cursor: pointer;
-            background-color: rgb(230, 23, 143);
+            background-color: #c70ebe;
             color: white;
             padding: 10px 15px;
             border: none;
         }
         .openbtn:hover {
-            background-color: rgb(243, 101, 184);;
+            background-color: #da67d4;
         }
         #main {
             transition: margin-left .5s;
@@ -60,65 +60,62 @@
             .sidebar {padding-top: 15px;}
             .sidebar a {font-size: 18px;}
         }
-        .page-header {
-            text-align: right;
-        }
+
         .page-footer {
             text-align: center;
         }
         body {
-            background-color: #a8faa5
+            background-color: #f5a0f1
+        }
+        img {
+            width: 150px;
+            length: 150px;
+            border-radius: 50%;
+        }
+        #p1, span {
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+            color:#000000;
         }
         </style>
     </head>
 
     <body>
         <div class="container">
-
-
         <div id="mySidebar" class="sidebar">
-            <center><img src="/img biodata/myfoto.jpg" width="100" length="200"></center>
+            <center><img src="/img biodata/crop.jpg"></center>
             <br>
-            <center><p>Nur Nindya Risnina</p></center>
+            <p id="p1">Nur Nindya Risnina <br>
+                5026201013</p>
             <br>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <a href="http://127.0.0.1:8000/pegawai">Pegawai</a>
             <a href="http://127.0.0.1:8000/absen">Absen</a>
-            <a href="#">Tugas Mingdep</a>
-            <a href="#">Praktikum</a>
-
+            <a href="http://127.0.0.1:8000/sepeda">Sepeda</a>
         </div>
-
         <div id="main">
-
             <div class="page-header">
-                <p><img src="/img biodata/myfoto.jpg" width="50" length="150">
-                Nur Nindya Risnina - 5026201013</p>
+                <button class="openbtn" onclick="openNav()">☰ My Assignment</button>
             </div>
-            <button class="openbtn" onclick="openNav()">☰ My Assignment</button>
 
+            @yield('isikonten')
 
-            @section('isikonten')
-            @show
         <hr>
         <div class="page-footer">
                 <p>Hak Cipta Oleh 5026201013 - Nur Nindya Risnina</p>
             </div>
         </div>
-
         <script>
             function openNav() {
               document.getElementById("mySidebar").style.width = "250px";
               document.getElementById("main").style.marginLeft = "250px";
             }
-
             function closeNav() {
               document.getElementById("mySidebar").style.width = "0";
               document.getElementById("main").style.marginLeft= "0";
             }
             </script>
-
-
         </div>
     </body>
 </html>

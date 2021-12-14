@@ -37,12 +37,25 @@ Route::post('/pegawai/store','PegawaiController@store');
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+Route::get('/pegawai/cari','PegawaiController@cari');
+Route::get('/pegawai/detail/{id}','PegawaiController@view');
 
 //absen
-Route::get('/absen','AbsenController@view');
-Route::get('/absen/nambah','AbsenController@nambah');
-Route::post('/absen/save','AbsenController@save');
-Route::get('/absen/ngedit/{id}','AbsenController@ngedit');
+Route::get('/absen','AbsenController@index');
+Route::get('/absen/tambah','AbsenController@tambah');
+Route::post('/absen/store','AbsenController@store');
+Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
+Route::get('/absen/cari','AbsenController@cari');
+Route::get('/absen/detail/{id}','AbsenController@view');
 
+//route sepeda
+Route::get('/sepeda','SepedaController@index');
+Route::get('/sepeda/tambah','SepedaController@tambah');
+Route::post('/sepeda/store','SepedaController@store');
+Route::get('/sepeda/edit/{id}','SepedaController@edit');
+Route::post('/sepeda/update','SepedaController@update');
+Route::get('/sepeda/hapus/{id}','SepedaController@hapus');
+Route::get('/sepeda/cari','SepedaController@cari');
+Route::get('/sepeda/detail/{id}','SepedaController@view');
