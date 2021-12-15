@@ -93,6 +93,7 @@
             <a href="http://127.0.0.1:8000/pegawai">Pegawai</a>
             <a href="http://127.0.0.1:8000/absen">Absen</a>
             <a href="http://127.0.0.1:8000/sepeda">Sepeda</a>
+            <a href="http://127.0.0.1:8000/karyawan1">Karyawan</a>
         </div>
         <div id="main">
             <div class="page-header">

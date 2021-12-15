@@ -59,3 +59,9 @@ Route::post('/sepeda/update','SepedaController@update');
 Route::get('/sepeda/hapus/{id}','SepedaController@hapus');
 Route::get('/sepeda/cari','SepedaController@cari');
 Route::get('/sepeda/detail/{id}','SepedaController@view');
+
+//karyawan1
+Route::get('/karyawan1','KaryawanController@index');
+Route::get('/karyawan1/tambah','KaryawanController@tambah');
+Route::post('/karyawan1/store','KaryawanController@store');
+Route::get('/karyawan1/hapus/{id}','KaryawanController@hapus');
